@@ -19,6 +19,17 @@ return [
   'runtimePath' => dirname(__DIR__) . '/runtime',
   'vendorPath' => dirname(__DIR__) . '/vendor',
 
+  /* Path Aliases */
+  'aliases' => [
+    '@bower' => '@vendor/bower-asset',
+    '@npm' => '@vendor/npm-asset',
+    '@webroot' => dirname(__DIR__) . '/public',
+    '@web' => '/',
+    '@runtime' => dirname(__DIR__) . '/runtime',
+    '@vendor' => dirname(__DIR__) . '/vendor',
+    '@app' => dirname(__DIR__),
+  ],
+
   /* Controller Namespace */
   'controllerNamespace' => 'app\commands',
 
@@ -39,6 +50,11 @@ return [
       'password' => $_ENV['DB_PASSWORD'],
       /* Character Encoding */
       'charset' => 'utf8mb4',
+    ],
+
+    /* Cache Configuration (File Cache) */
+    'cache' => [
+      'class' => yii\caching\FileCache::class,
     ],
   ],
 ];

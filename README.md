@@ -338,6 +338,27 @@ PROJECT/
 └── yii.bat                     # Console entry point (Windows)
 ```
 
+## 📚 Comprehensive Guides
+
+For detailed instructions on building features and creating commands:
+
+- **[GUIDE_MVC_FEATURES.md](GUIDE_MVC_FEATURES.md)** - Complete guide to building MVC features:
+  - Creating models, controllers, and views
+  - Form handling and validation
+  - Relationships and queries
+  - Search, filtering, and pagination
+  - File uploads and AJAX operations
+  - Best practices and patterns
+
+- **[GUIDE_CONSOLE_COMMANDS.md](GUIDE_CONSOLE_COMMANDS.md)** - Complete guide to console commands:
+  - Creating custom commands
+  - Database migrations
+  - Cron jobs and scheduled tasks
+  - Data processing and reindexing
+  - Database maintenance
+  - Email sending and cache management
+  - Import/Export operations
+
 ## 🛠️ Common Tasks
 
 ### Database Migrations
