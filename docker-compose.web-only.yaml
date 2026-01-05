@@ -1,0 +1,23 @@
+version: '3.9'
+
+# Docker Compose configuration for Web Server Only
+# Use this when you want to run only the web server in Docker
+# and connect to an external MySQL database (local or remote)
+#
+# Usage: docker-compose -f docker-compose.web-only.yaml up -d
+
+services:
+  web:
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+    container_name: yii2-web
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/html       # mount project folder
+      - ./docker/apache/default.conf:/etc/apache2/sites-available/000-default.conf
+    # No depends_on - MySQL is external
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html/public
+

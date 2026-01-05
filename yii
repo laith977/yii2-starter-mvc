@@ -1,0 +1,33 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Yii Console Application Entry Point
+ *
+ * Bootstrap script for running Yii2 console commands.
+ * Used for migrations, custom console commands, etc.
+ *
+ * Usage:
+ *   ./yii migrate
+ *   ./yii migrate/create create_users_table
+ */
+
+declare(strict_types=1);
+
+/* Load Environment Variables - MUST BE FIRST */
+require __DIR__ . '/config/env.php';
+
+/* Load Composer Dependencies */
+require __DIR__ . '/vendor/autoload.php';
+
+/* Load Yii Framework */
+require __DIR__ . '/vendor/yiisoft/yii2/Yii.php';
+
+/* Load Console Configuration */
+$config = require __DIR__ . '/config/console.php';
+
+/* Initialize and Run Console Application */
+$application = new yii\console\Application($config);
+$exitCode = $application->run();
+exit($exitCode);
+
